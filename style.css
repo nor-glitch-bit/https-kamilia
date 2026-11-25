@@ -1,0 +1,55 @@
+:root{
+  --night:#1b2452; --indigo:#2d3b8a; --mist:#eef3fb;
+  --powder:#c9dbf3; --gold:#e2b659; --ink:#16204a; --muted:#56628c;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Tajawal",Tahoma,sans-serif;
+  background:var(--mist);color:var(--ink);
+  font-size:1.125rem;line-height:1.95;
+}
+h1,h2,blockquote,.num{font-family:"Aref Ruqaa","Traditional Arabic",serif}
+
+/* ===== الغلاف ===== */
+.hero{
+  position:relative;min-height:92vh;display:grid;place-items:center;
+  text-align:center;padding:4rem 1.25rem;overflow:hidden;color:#fff;
+  background:radial-gradient(ellipse at 50% 0,var(--indigo),var(--night) 70%);
+  border-radius:0 0 50% 50% / 0 0 48px 48px;
+}
+.moon{
+  width:84px;height:84px;border-radius:50%;margin:0 auto 2.2rem;
+  box-shadow:-20px 8px 0 0 var(--gold);transform:rotate(-20deg);
+}
+.hero small{display:block;color:var(--powder);font-size:1.15rem}
+h1{
+  font-size:clamp(3.2rem,12vw,7.2rem);font-weight:700;line-height:1.35;
+  margin:.4rem 0 1rem;color:#fff;
+}
+.hero p{max-width:28ch;margin:0 auto;color:var(--powder)}
+.star{
+  position:absolute;width:6px;height:6px;border-radius:50%;
+  background:var(--gold);animation:tw 3s ease-in-out infinite;
+}
+@keyframes tw{50%{opacity:.2;transform:scale(.55)}}
+
+/* ===== المحتوى ===== */
+.wrap{max-width:980px;margin:0 auto;padding:4.5rem 1.25rem}
+h2{font-size:2.2rem;line-height:1.5;margin-bottom:1rem;color:var(--indigo)}
+.intro{max-width:680px;text-align:center}
+.intro p{max-width:38ch;margin:0 auto}
+.date{margin-top:1rem;color:var(--muted)}
+
+.count{background:var(--powder);text-align:center;padding:3.5rem 1rem;color:var(--indigo)}
+.num{font-size:clamp(4.5rem,14vw,7rem);font-weight:700;line-height:1.2}
+
+.dua{background:var(--night);padding:5rem 1.25rem;text-align:center}
+blockquote{
+  max-width:20ch;margin:0 auto;color:var(--gold);
+  font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.9;
+}
+
+footer{text-align:center;padding:2.5rem 1rem 3.5rem;color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){.star{animation:none}}
